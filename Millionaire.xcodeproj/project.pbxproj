@@ -13,6 +13,12 @@
 		DCB18B83298FE47A006FCC61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB18B81298FE47A006FCC61 /* Main.storyboard */; };
 		DCB18B85298FE47C006FCC61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCB18B84298FE47C006FCC61 /* Assets.xcassets */; };
 		DCB18B88298FE47C006FCC61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCB18B86298FE47C006FCC61 /* LaunchScreen.storyboard */; };
+		DCB18B95298FE7EB006FCC61 /* BackroundMusicPlayerIsThinking.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCB18B94298FE7EB006FCC61 /* BackroundMusicPlayerIsThinking.mp3 */; };
+		DCB18B97298FE8CD006FCC61 /* AnsweredRight.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCB18B96298FE8CD006FCC61 /* AnsweredRight.mp3 */; };
+		DCB18B99298FE992006FCC61 /* AnsweredWrong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCB18B98298FE992006FCC61 /* AnsweredWrong.mp3 */; };
+		DCB18B9B298FE9EA006FCC61 /* AnswerIsSubmitted.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCB18B9A298FE9EA006FCC61 /* AnswerIsSubmitted.mp3 */; };
+		DCB18B9D298FEAF9006FCC61 /* WonMillion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DCB18B9C298FEAF9006FCC61 /* WonMillion.mp3 */; };
+		DCB18B9F298FEBA6006FCC61 /* Logic_vc1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB18B9E298FEBA6006FCC61 /* Logic_vc1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		DCB18B84298FE47C006FCC61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCB18B87298FE47C006FCC61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DCB18B89298FE47C006FCC61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCB18B94298FE7EB006FCC61 /* BackroundMusicPlayerIsThinking.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BackroundMusicPlayerIsThinking.mp3; sourceTree = "<group>"; };
+		DCB18B96298FE8CD006FCC61 /* AnsweredRight.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AnsweredRight.mp3; sourceTree = "<group>"; };
+		DCB18B98298FE992006FCC61 /* AnsweredWrong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AnsweredWrong.mp3; sourceTree = "<group>"; };
+		DCB18B9A298FE9EA006FCC61 /* AnswerIsSubmitted.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AnswerIsSubmitted.mp3; sourceTree = "<group>"; };
+		DCB18B9C298FEAF9006FCC61 /* WonMillion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WonMillion.mp3; sourceTree = "<group>"; };
+		DCB18B9E298FEBA6006FCC61 /* Logic_vc1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic_vc1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +52,10 @@
 		DCB18B6F298FE47A006FCC61 = {
 			isa = PBXGroup;
 			children = (
+				DCB18B92298FE4E3006FCC61 /* Delegates */,
+				DCB18B8F298FE489006FCC61 /* Models */,
+				DCB18B90298FE4A5006FCC61 /* Views */,
+				DCB18B91298FE4AF006FCC61 /* Controllers */,
 				DCB18B7A298FE47A006FCC61 /* Millionaire */,
 				DCB18B79298FE47A006FCC61 /* Products */,
 			);
@@ -56,15 +72,49 @@
 		DCB18B7A298FE47A006FCC61 /* Millionaire */ = {
 			isa = PBXGroup;
 			children = (
-				DCB18B7B298FE47A006FCC61 /* AppDelegate.swift */,
-				DCB18B7D298FE47A006FCC61 /* SceneDelegate.swift */,
-				DCB18B7F298FE47A006FCC61 /* ViewController.swift */,
-				DCB18B81298FE47A006FCC61 /* Main.storyboard */,
 				DCB18B84298FE47C006FCC61 /* Assets.xcassets */,
-				DCB18B86298FE47C006FCC61 /* LaunchScreen.storyboard */,
+				DCB18B9A298FE9EA006FCC61 /* AnswerIsSubmitted.mp3 */,
+				DCB18B98298FE992006FCC61 /* AnsweredWrong.mp3 */,
+				DCB18B96298FE8CD006FCC61 /* AnsweredRight.mp3 */,
+				DCB18B94298FE7EB006FCC61 /* BackroundMusicPlayerIsThinking.mp3 */,
+				DCB18B9C298FEAF9006FCC61 /* WonMillion.mp3 */,
 				DCB18B89298FE47C006FCC61 /* Info.plist */,
 			);
 			path = Millionaire;
+			sourceTree = "<group>";
+		};
+		DCB18B8F298FE489006FCC61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCB18B9E298FEBA6006FCC61 /* Logic_vc1.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DCB18B90298FE4A5006FCC61 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCB18B81298FE47A006FCC61 /* Main.storyboard */,
+				DCB18B86298FE47C006FCC61 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DCB18B91298FE4AF006FCC61 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCB18B7F298FE47A006FCC61 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DCB18B92298FE4E3006FCC61 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				DCB18B7B298FE47A006FCC61 /* AppDelegate.swift */,
+				DCB18B7D298FE47A006FCC61 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +176,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCB18B88298FE47C006FCC61 /* LaunchScreen.storyboard in Resources */,
+				DCB18B99298FE992006FCC61 /* AnsweredWrong.mp3 in Resources */,
+				DCB18B9B298FE9EA006FCC61 /* AnswerIsSubmitted.mp3 in Resources */,
+				DCB18B97298FE8CD006FCC61 /* AnsweredRight.mp3 in Resources */,
+				DCB18B9D298FEAF9006FCC61 /* WonMillion.mp3 in Resources */,
 				DCB18B85298FE47C006FCC61 /* Assets.xcassets in Resources */,
 				DCB18B83298FE47A006FCC61 /* Main.storyboard in Resources */,
+				DCB18B95298FE7EB006FCC61 /* BackroundMusicPlayerIsThinking.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCB18B80298FE47A006FCC61 /* ViewController.swift in Sources */,
+				DCB18B9F298FEBA6006FCC61 /* Logic_vc1.swift in Sources */,
 				DCB18B7C298FE47A006FCC61 /* AppDelegate.swift in Sources */,
 				DCB18B7E298FE47A006FCC61 /* SceneDelegate.swift in Sources */,
 			);
