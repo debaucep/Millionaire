@@ -17,6 +17,9 @@
 		DC32D9C829929AE6001F6E84 /* GameStartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC32D9C729929AE6001F6E84 /* GameStartVC.swift */; };
 		DC32D9CB29929B81001F6E84 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC32D9C929929B81001F6E84 /* Questions.swift */; };
 		DC32D9CC29929B81001F6E84 /* QuizBrain .swift in Sources */ = {isa = PBXBuildFile; fileRef = DC32D9CA29929B81001F6E84 /* QuizBrain .swift */; };
+		DC79EBD92992C14C00A2BF54 /* Hints.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79EBD82992C14C00A2BF54 /* Hints.swift */; };
+		DC79EBDB2992C16800A2BF54 /* HintsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79EBDA2992C16800A2BF54 /* HintsData.swift */; };
+		DCA72EBD2992ABE400CCD434 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA72EBC2992ABE400CCD434 /* Timer.swift */; };
 		DCB18B7C298FE47A006FCC61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB18B7B298FE47A006FCC61 /* AppDelegate.swift */; };
 		DCB18B7E298FE47A006FCC61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB18B7D298FE47A006FCC61 /* SceneDelegate.swift */; };
 		DCB18B80298FE47A006FCC61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB18B7F298FE47A006FCC61 /* ViewController.swift */; };
@@ -44,6 +47,9 @@
 		DC32D9C729929AE6001F6E84 /* GameStartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStartVC.swift; sourceTree = "<group>"; };
 		DC32D9C929929B81001F6E84 /* Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		DC32D9CA29929B81001F6E84 /* QuizBrain .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "QuizBrain .swift"; sourceTree = "<group>"; };
+		DC79EBD82992C14C00A2BF54 /* Hints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hints.swift; sourceTree = "<group>"; };
+		DC79EBDA2992C16800A2BF54 /* HintsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsData.swift; sourceTree = "<group>"; };
+		DCA72EBC2992ABE400CCD434 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		DCB18B78298FE47A006FCC61 /* Millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB18B7B298FE47A006FCC61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCB18B7D298FE47A006FCC61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +169,9 @@
 				DCEF53C229913399001062A9 /* Sound.swift */,
 				DC32D9C929929B81001F6E84 /* Questions.swift */,
 				DC32D9CA29929B81001F6E84 /* QuizBrain .swift */,
+				DCA72EBC2992ABE400CCD434 /* Timer.swift */,
+				DC79EBD82992C14C00A2BF54 /* Hints.swift */,
+				DC79EBDA2992C16800A2BF54 /* HintsData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,15 +290,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC79EBDB2992C16800A2BF54 /* HintsData.swift in Sources */,
 				DCEF53C329913399001062A9 /* Sound.swift in Sources */,
 				DCB18B80298FE47A006FCC61 /* ViewController.swift in Sources */,
 				DC32D9BE29929A04001F6E84 /* GameRulesVC.swift in Sources */,
 				3539A2A329924F0300993C1F /* MainScreenVC.swift in Sources */,
+				DCA72EBD2992ABE400CCD434 /* Timer.swift in Sources */,
 				DCB18B9F298FEBA6006FCC61 /* Logic_vc1.swift in Sources */,
 				DCB18B7C298FE47A006FCC61 /* AppDelegate.swift in Sources */,
 				DC32D9CB29929B81001F6E84 /* Questions.swift in Sources */,
 				DCD93E432991518600A0AE04 /* TestVC.swift in Sources */,
 				DC32D9CC29929B81001F6E84 /* QuizBrain .swift in Sources */,
+				DC79EBD92992C14C00A2BF54 /* Hints.swift in Sources */,
 				DC32D9C829929AE6001F6E84 /* GameStartVC.swift in Sources */,
 				DCB18B7E298FE47A006FCC61 /* SceneDelegate.swift in Sources */,
 				DC32D9C229929A4F001F6E84 /* GameProgressVC.swift in Sources */,

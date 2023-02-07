@@ -6,3 +6,28 @@
 //
 
 import Foundation
+import UIKit
+
+
+
+
+
+var timer = Timer()
+
+var vc = ViewControllerNewTest()
+var label = vc.counterLabe
+
+
+
+class Timer {
+    
+    
+    var timer = Timer()
+    var secondsRemaining = 30
+    func refreshTimer () {
+
+    }
+        
+}
+    
+
