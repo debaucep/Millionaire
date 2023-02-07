@@ -25,6 +25,7 @@ class ViewControllerNewTest: UIViewController {
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        counterLabe.text = "Press Start below"
  
     }
 
@@ -41,23 +42,23 @@ class ViewControllerNewTest: UIViewController {
     
     
     var secondsRemaining = 30
-    var timer = Timer()
     
     
     @IBAction func counterButtonPressed(_ sender: UIButton) {
 
+  
+        
 
-//        
-//        
-//        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
-//            if self.secondsRemaining > 0 {
-//                //print ("\(self.secondsRemaining) seconds")
-//                counterLabe.text = String (secondsRemaining)
-//                secondsRemaining -= 1
-//            } else {
-//                Timer.invalidate()
-//            }
-//        }
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
+            if self.secondsRemaining > 0 {
+                //print ("\(self.secondsRemaining) seconds")
+                self.counterLabe.text = String (self.secondsRemaining)
+                self.secondsRemaining -= 1
+            } else {
+                Timer.invalidate()
+            }
+        }
 
         
     }
