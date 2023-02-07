@@ -41,22 +41,24 @@ class ViewControllerNewTest: UIViewController {
     
     
     var secondsRemaining = 30
+    var timer = Timer()
+    
     
     @IBAction func counterButtonPressed(_ sender: UIButton) {
 
 
-        
-        
+//        
+//        
 //        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
 //            if self.secondsRemaining > 0 {
 //                //print ("\(self.secondsRemaining) seconds")
-//                label?.text = String (secondsRemaining)
+//                counterLabe.text = String (secondsRemaining)
 //                secondsRemaining -= 1
 //            } else {
 //                Timer.invalidate()
 //            }
 //        }
-//
+
         
     }
     

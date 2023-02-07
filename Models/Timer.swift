@@ -18,6 +18,7 @@ var vc = ViewControllerNewTest()
 var label = vc.counterLabe
 
 
+// Can we Timer Logic transfer Logic out of Controller?
 
 class Timer {
     
