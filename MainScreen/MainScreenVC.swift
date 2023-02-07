@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 final class MainScreenVC: UIViewController {
   private enum SegueId {
     static let gameRules = "toGameRules"
