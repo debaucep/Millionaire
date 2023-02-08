@@ -38,6 +38,8 @@ class ViewControllerNewTest: UIViewController {
         
         playSound("AnsweredRight")
         
+        
+        
     }
     
     
@@ -63,8 +65,5 @@ class ViewControllerNewTest: UIViewController {
         
     }
     
-    //********************************
-    
-
-    
+  
 }
