@@ -1,28 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17150" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17122"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game RulesVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameRulesVC" id="Y6W-OH-hqX" customClass="GameRulesVC" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UHf-wd-IdY">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Ml-uV-lZK">
+                                <rect key="frame" x="16" y="59" width="361" height="779"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Rules " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyP-db-7NI">
+                                        <rect key="frame" x="56" y="19" width="249" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fd3-g8-gBf">
+                                        <rect key="frame" x="0.0" y="71" width="361" height="695"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vyP-db-7NI" secondAttribute="trailing" constant="56" id="7Eg-qt-K3K"/>
+                                    <constraint firstAttribute="trailing" secondItem="fd3-g8-gBf" secondAttribute="trailing" id="IwZ-Bd-1Mt"/>
+                                    <constraint firstAttribute="bottom" secondItem="fd3-g8-gBf" secondAttribute="bottom" constant="13" id="b8R-BV-QnY"/>
+                                    <constraint firstItem="vyP-db-7NI" firstAttribute="top" secondItem="5Ml-uV-lZK" secondAttribute="top" constant="19" id="mJ2-h1-3XL"/>
+                                    <constraint firstItem="vyP-db-7NI" firstAttribute="leading" secondItem="5Ml-uV-lZK" secondAttribute="leading" constant="56" id="nh0-FL-qJ5"/>
+                                    <constraint firstItem="fd3-g8-gBf" firstAttribute="top" secondItem="vyP-db-7NI" secondAttribute="bottom" constant="16" id="o4d-O9-pHZ"/>
+                                    <constraint firstItem="fd3-g8-gBf" firstAttribute="leading" secondItem="5Ml-uV-lZK" secondAttribute="leading" id="tPj-RW-1Qk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5Ml-uV-lZK" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="6Xa-5j-k8a"/>
+                            <constraint firstItem="UHf-wd-IdY" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="LRz-R3-Qqd"/>
+                            <constraint firstItem="UHf-wd-IdY" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Puq-PF-4mV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Ml-uV-lZK" secondAttribute="trailing" constant="16" id="RhN-U6-NIO"/>
+                            <constraint firstItem="5Ml-uV-lZK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="WPZ-Kq-Irw"/>
+                            <constraint firstAttribute="bottom" secondItem="5Ml-uV-lZK" secondAttribute="bottom" constant="14" id="e7o-tU-omu"/>
+                            <constraint firstAttribute="bottom" secondItem="UHf-wd-IdY" secondAttribute="bottom" id="pGl-fa-fCl"/>
+                            <constraint firstAttribute="trailing" secondItem="UHf-wd-IdY" secondAttribute="trailing" id="zxq-rq-wMx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rulesText" destination="fd3-g8-gBf" id="ZjJ-Mu-kKQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
