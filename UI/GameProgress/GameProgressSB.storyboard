@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Game ProgressVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="GameProgressVC" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -600,6 +600,23 @@
                             <constraint firstItem="Nye-DA-pF0" firstAttribute="top" secondItem="x4Q-g5-o9g" secondAttribute="bottom" constant="10" id="sYr-VI-KqL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="Question1" destination="e8S-WN-pKU" id="tpu-KF-GXj"/>
+                        <outlet property="Question10" destination="cmW-wk-83k" id="cw6-ba-VeC"/>
+                        <outlet property="Question11" destination="7bE-Wc-EyN" id="ifE-0x-xkm"/>
+                        <outlet property="Question12" destination="Ybk-Lq-p0u" id="vAs-L0-PPb"/>
+                        <outlet property="Question13" destination="5wA-X7-vtK" id="iAN-9z-Fhd"/>
+                        <outlet property="Question14" destination="2W2-ut-T57" id="18F-X6-h9t"/>
+                        <outlet property="Question15" destination="drq-4G-M7u" id="dlK-3J-A3d"/>
+                        <outlet property="Question2" destination="D5R-qw-6HE" id="p0L-G9-C0t"/>
+                        <outlet property="Question3" destination="guu-lR-QjH" id="6Wa-1L-JHh"/>
+                        <outlet property="Question4" destination="mX1-ez-GgW" id="ZlY-F8-PYD"/>
+                        <outlet property="Question5" destination="xpS-gb-CER" id="F6d-ER-h9b"/>
+                        <outlet property="Question6" destination="0eh-7w-eec" id="85H-5G-pyr"/>
+                        <outlet property="Question7" destination="Khp-Mt-vmY" id="3Lf-hg-foS"/>
+                        <outlet property="Question8" destination="Qli-Ie-dlM" id="OL7-VK-01m"/>
+                        <outlet property="Question9" destination="kG1-3e-04Q" id="fYS-Gb-kq2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
