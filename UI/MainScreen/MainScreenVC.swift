@@ -23,11 +23,11 @@ final class MainScreenVC: UIViewController {
   }
   
   @IBAction func rulesButtonPressed(_ sender: UIButton) {
-    performSegue(withIdentifier: SegueId.gameRules, sender: self)
+    
   }
   
   @IBAction func startButtonPressed(_ sender: UIButton) {
-    performSegue(withIdentifier: SegueId.startGame, sender: self)
+    
   }
   
   private func setupUI() {
@@ -37,14 +37,14 @@ final class MainScreenVC: UIViewController {
 
 //MARK: - Segue setup
 
-extension MainScreenVC {
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      if segue.identifier == SegueId.gameRules {
-        // let destinationVC = segue.destination as ...
-      } else if segue.identifier == SegueId.startGame {
-        // let destinationVC = segue.destination as ...
-      }
-    }
+//extension MainScreenVC {
+//
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//      if segue.identifier == SegueId.gameRules {
+//        // let destinationVC = segue.destination as ...
+//      } else if segue.identifier == SegueId.startGame {
+//        // let destinationVC = segue.destination as ...
+//      }
+//    }
   
-}
+//}

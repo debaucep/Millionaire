@@ -19,6 +19,7 @@ class GameStartVC: UIViewController {
 
     @IBAction func registerButton(_ sender: UIButton) {
         
+        
     }
     
 

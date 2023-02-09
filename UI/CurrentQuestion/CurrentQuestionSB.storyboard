@@ -11,7 +11,7 @@
         <!--CurrentQuestionVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="CurrentQuestionSB" title="CurrentQuestionVC" id="Y6W-OH-hqX" customClass="CurrentQuestionVC" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrentQuestionVC" title="CurrentQuestionVC" id="Y6W-OH-hqX" customClass="CurrentQuestionVC" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,6 +74,7 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                         <connections>
                                                             <action selector="choicePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MtD-0N-CVv"/>
+                                                            <segue destination="0j2-km-Mot" kind="presentation" modalPresentationStyle="fullScreen" id="Ti2-dq-UCA"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4N5-mZ-CuJ">
@@ -82,6 +83,7 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                         <connections>
                                                             <action selector="choicePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tjW-1w-6Hp"/>
+                                                            <segue destination="0j2-km-Mot" kind="presentation" modalPresentationStyle="fullScreen" id="JQj-ie-fPP"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcb-G7-NGQ">
@@ -90,6 +92,7 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                         <connections>
                                                             <action selector="choicePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Rxb-SZ-QYG"/>
+                                                            <segue destination="0j2-km-Mot" kind="presentation" modalPresentationStyle="fullScreen" id="eoO-wh-a7K"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLH-8b-IMS">
@@ -98,6 +101,7 @@
                                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                         <connections>
                                                             <action selector="choicePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xAQ-Yl-hMf"/>
+                                                            <segue destination="0j2-km-Mot" kind="presentation" modalPresentationStyle="fullScreen" id="b0F-zS-b3J"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -239,7 +243,26 @@
             </objects>
             <point key="canvasLocation" x="-1170.2290076335878" y="3.5211267605633805"/>
         </scene>
+        <!--GameProgressVC-->
+        <scene sceneID="dHe-5H-0Nl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameProgressSB" referencedIdentifier="GameProgressVC" id="0j2-km-Mot" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJP-me-cay" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-503" y="4"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="m4i-gq-vSl">
+            <objects>
+                <viewControllerPlaceholder id="doJ-Ct-Tnv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="26o-dp-UAz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1437" y="-361"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ti2-dq-UCA"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

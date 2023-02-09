@@ -11,7 +11,7 @@
         <!--Game StartVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="GameStartVC" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameStartVC" id="Y6W-OH-hqX" customClass="GameStartVC" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,6 +68,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="registerButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qNq-Gp-FZD"/>
+                                                    <segue destination="RrC-9v-XE8" kind="presentation" modalPresentationStyle="fullScreen" id="N9V-RQ-f62"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -120,6 +121,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+        <!--CurrentQuestionVC-->
+        <scene sceneID="buY-wX-JN8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CurrentQuestionSB" referencedIdentifier="CurrentQuestionVC" id="RrC-9v-XE8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svH-hX-9aB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="50"/>
         </scene>
     </scenes>
     <resources>
