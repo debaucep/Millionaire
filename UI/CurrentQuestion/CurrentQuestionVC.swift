@@ -24,10 +24,13 @@ class CurrentQuestionVC: UIViewController {
     
     @IBOutlet weak var friendsHelp: UIButton!
     
+    @IBOutlet weak var timerLabel: UILabel!
     
     
     
     @IBAction func choicePressed(_ sender: UIButton) {
+        
+        stopSound()
         
     }
     
@@ -36,12 +39,27 @@ class CurrentQuestionVC: UIViewController {
         //the help is shown and the image of button is crossed with red lines
     }
     
+    var timerCounter = 5
     
+    // 5 is made only for test purpose. come back to 30 before release
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        timerLabel.text = String (timerCounter)
         
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
+            if self.timerCounter > 0 {
+                //print ("\(self.secondsRemaining) seconds")
+                self.timerLabel.text = String (self.timerCounter)
+                self.timerCounter -= 1
+            } else {
+                Timer.invalidate()
+                // And consider player answered WRONG!
+            }
+        }
         
+        playSound("BackroundMusicPlayerIsThinking")
+                
     }
 }
 

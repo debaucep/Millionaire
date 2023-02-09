@@ -51,15 +51,28 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timerLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJU-KW-8ZB">
+                                                <rect key="frame" x="162" y="196" width="37" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="oAp-Y1-TJ3"/>
+                                                    <constraint firstAttribute="width" constant="37" id="u9e-V5-EDq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="4yb-jS-CGR" firstAttribute="top" secondItem="tn2-XA-KCp" secondAttribute="top" id="5GZ-2K-GQS"/>
+                                            <constraint firstItem="pJU-KW-8ZB" firstAttribute="top" secondItem="qem-3r-OJq" secondAttribute="bottom" constant="86" id="AzZ-Zx-YDF"/>
                                             <constraint firstItem="qem-3r-OJq" firstAttribute="top" secondItem="tn2-XA-KCp" secondAttribute="top" constant="5" id="DxX-4L-6WU"/>
+                                            <constraint firstAttribute="bottom" secondItem="pJU-KW-8ZB" secondAttribute="bottom" constant="15.333333333333343" id="L3M-Me-leC"/>
                                             <constraint firstAttribute="trailing" secondItem="qem-3r-OJq" secondAttribute="trailing" constant="8" id="YYG-bp-G6g"/>
                                             <constraint firstItem="ibh-1s-FDt" firstAttribute="leading" secondItem="tn2-XA-KCp" secondAttribute="leading" constant="8" id="fRe-i6-Ug6"/>
                                             <constraint firstItem="4yb-jS-CGR" firstAttribute="leading" secondItem="tn2-XA-KCp" secondAttribute="leading" id="iGu-jc-pWQ"/>
                                             <constraint firstItem="ibh-1s-FDt" firstAttribute="top" secondItem="4yb-jS-CGR" secondAttribute="bottom" constant="8" id="rSC-JU-BwK"/>
+                                            <constraint firstItem="pJU-KW-8ZB" firstAttribute="centerX" secondItem="tn2-XA-KCp" secondAttribute="centerX" id="v0V-NB-aqF"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oU-NS-6sd">
@@ -237,6 +250,7 @@
                         <outlet property="moneyCount" destination="n9U-pv-JY0" id="hHx-NH-DLE"/>
                         <outlet property="questionNumber" destination="ibh-1s-FDt" id="EDw-sd-pNH"/>
                         <outlet property="questionText" destination="qem-3r-OJq" id="JbA-lS-KBE"/>
+                        <outlet property="timerLabel" destination="pJU-KW-8ZB" id="Myg-rh-vIe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

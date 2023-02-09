@@ -27,6 +27,10 @@ func playSound(_ name: String) {
     }
 }
 
+func stopSound () {
+    player?.stop()
+}
+
 // end of Sound
 
 
