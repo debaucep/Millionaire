@@ -647,10 +647,10 @@
             </objects>
             <point key="canvasLocation" x="680" y="-129"/>
         </scene>
-        <!--MainScreenVC-->
+        <!--MainVC-->
         <scene sceneID="lGU-47-BgV">
             <objects>
-                <viewControllerPlaceholder storyboardName="MainScreenSB" referencedIdentifier="MainScreenVC" id="ycC-iA-QbZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MainScreenSB" referencedIdentifier="MainVC" id="ycC-iA-QbZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ug-it-6v0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="637" y="61"/>
