@@ -62,6 +62,7 @@ class CurrentQuestionVC: UIViewController {
         self.timerCounter -= 1
       } else {
         Timer.invalidate()
+        self.timeIsOver()
         // And consider player answered WRONG!
       }
     }
@@ -103,6 +104,13 @@ class CurrentQuestionVC: UIViewController {
     DispatchQueue.main.asyncAfter(deadline: .now()) {
       result ? (control.tintColor = .systemGreen) : (control.tintColor = .systemRed)
     }
+  }
+  
+  private func timeIsOver() {
+    let storyboard = UIStoryboard(name: "GameProgressSB", bundle: nil)
+    let vc = storyboard.instantiateViewController(withIdentifier: "GameProgressVC") as! GameProgressVC
+    vc.modalPresentationStyle = .fullScreen
+    present(vc, animated: true)
   }
   
 }
