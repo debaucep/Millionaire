@@ -41,9 +41,17 @@ class CurrentQuestionVC: UIViewController {
   @IBOutlet weak var answerD: UIButton!
   
   var timerCounter = 5
+    var currentQuestion = 0
   
+    
+    
+    func updateUI () {
+        questionText.text = question?.text
+    }
+    
   // 5 is made only for test purpose. come back to 30 before release
 var timer = Timer ()
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     answerButtons = [answerA, answerB, answerC, answerD]
@@ -69,9 +77,17 @@ var timer = Timer ()
     }
     
     playSound("BackroundMusicPlayerIsThinking")
-    
+   
+      updateUI ()
+      
+      
   }
+   
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        print ("View Will Appear code is here")
+    }
 
   @IBAction func choicePressed(_ sender: UIButton) {
     stopSound()
