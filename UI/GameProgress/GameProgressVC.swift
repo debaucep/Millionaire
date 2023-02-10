@@ -27,12 +27,30 @@ class GameProgressVC: UIViewController {
     
     var listOfViews = [UIImageView]()
     let currentLevel = 0
+    var timerProgress = Timer ()
+    var timerProgressCounter = 8.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
         setupLevel()
+        
+        timerProgress = Timer.scheduledTimer(withTimeInterval: timerProgressCounter, repeats: true) { (Timer) in
+          if self.timerProgressCounter > 0 {
+//            print ("\(self.timerProgressCounter) seconds")
+//            self.timerProgressCounter -= 1
+
+              self.dismiss(animated: true)
+              stopSound()
+          } else {
+            Timer.invalidate()
+            // And consider player answered WRONG!
+          }
+        }
+        
+        
+        
     }
     
     private func setupUI() {

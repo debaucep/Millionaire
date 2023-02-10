@@ -248,8 +248,11 @@
                         <outlet property="answerC" destination="Dcb-G7-NGQ" id="mbq-C8-V36"/>
                         <outlet property="answerD" destination="LLH-8b-IMS" id="jqA-39-dKs"/>
                         <outlet property="audienceHelp" destination="hci-Wf-PRm" id="SCq-vY-dAF"/>
+                        <outlet property="audienceHelpImage" destination="zWh-hF-f04" id="M29-NL-BMh"/>
                         <outlet property="fiftyFiftyHelp" destination="ocz-zb-dUH" id="YP6-eh-YFE"/>
+                        <outlet property="fiftyFiftyImage" destination="D64-OD-Tnh" id="PT0-Fr-4XO"/>
                         <outlet property="friendsHelp" destination="qLL-Xc-aqO" id="eds-ex-dZI"/>
+                        <outlet property="friendsHelpImage" destination="WJt-jV-ux6" id="YbM-gh-gkh"/>
                         <outlet property="logoImage" destination="4yb-jS-CGR" id="Zin-Cy-f0x"/>
                         <outlet property="moneyCount" destination="n9U-pv-JY0" id="hHx-NH-DLE"/>
                         <outlet property="questionNumber" destination="ibh-1s-FDt" id="EDw-sd-pNH"/>

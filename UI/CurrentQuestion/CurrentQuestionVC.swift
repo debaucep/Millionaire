@@ -29,11 +29,11 @@ class CurrentQuestionVC: UIViewController {
   
   @IBOutlet weak var timerLabel: UILabel!
   
-  /*need to connect these three outlets to storyboard
+ 
    @IBOutlet weak var fiftyFiftyImage: UIImageView!
    @IBOutlet weak var audienceHelpImage: UIImageView!
    @IBOutlet weak var friendsHelpImage: UIImageView!
-   */
+
     
   @IBOutlet weak var answerA: UIButton!
   @IBOutlet weak var answerB: UIButton!
