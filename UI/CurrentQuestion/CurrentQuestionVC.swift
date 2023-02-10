@@ -29,11 +29,11 @@ class CurrentQuestionVC: UIViewController {
   
   @IBOutlet weak var timerLabel: UILabel!
   
-/*need to connect these three outlets to storyboard
-  @IBOutlet weak var fiftyFiftyImage: UIImageView!
-  @IBOutlet weak var audienceHelpImage: UIImageView!
-  @IBOutlet weak var friendsHelpImage: UIImageView!
-*/
+  /*need to connect these three outlets to storyboard
+   @IBOutlet weak var fiftyFiftyImage: UIImageView!
+   @IBOutlet weak var audienceHelpImage: UIImageView!
+   @IBOutlet weak var friendsHelpImage: UIImageView!
+   */
   @IBOutlet weak var answerA: UIButton!
   @IBOutlet weak var answerB: UIButton!
   @IBOutlet weak var answerC: UIButton!
@@ -45,7 +45,7 @@ class CurrentQuestionVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    answerButtons = [answerA, answerB, answerC, answerD].compactMap{$0}
+    answerButtons = [answerA, answerB, answerC, answerD]
     fiftyFiftyHelp.setTitle("50/50", for: .normal)
     audienceHelp.setTitle("Audience Help", for: .normal)
     friendsHelp.setTitle("Friends Help", for: .normal)
@@ -99,11 +99,29 @@ class CurrentQuestionVC: UIViewController {
     return answer == trueAnswer ? true : false
   }
   
-  
   private func changeColor(for control: UIControl, result: Bool) {
     DispatchQueue.main.asyncAfter(deadline: .now()) {
       result ? (control.tintColor = .systemGreen) : (control.tintColor = .systemRed)
     }
+  }
+  
+}
+
+//MARK: - Hints logic
+extension CurrentQuestionVC {
+  private func turnHintOff(for sender: UIButton) {
+    sender.isUserInteractionEnabled = false
+    sender.isHidden = true
+    // uncomment if corresponding outlets were connected
+    //    switch title {
+    //    case "50/50":
+    //      fiftyFiftyImage.image = UIImage(named: "Logo")
+    //    case "Audience Help":
+    //      audienceHelpImage.image = UIImage(named: "Logo")
+    //    case "Friends Help":
+    //      friendsHelpImage.image = UIImage(named: "Logo")
+    //    default: debugPrint("Unexpected case")
+    //    }
   }
   
   private func applyHint(for senderTitle: String) {
@@ -114,7 +132,6 @@ class CurrentQuestionVC: UIViewController {
     case "50/50":
       let options = defineRemainedAnswers()
       let wrongAnswers = Hint.fiftyFifty(for: options, with: answer)
-      print("Wrong answers are: \(wrongAnswers)")
       wrongAnswers.forEach {
         let button = defineAnswerButton(withTitle: $0)
         button?.setTitle("", for: .normal)
@@ -138,21 +155,6 @@ class CurrentQuestionVC: UIViewController {
       
     default: print("There is no hints")
     }
-  }
-  
-  private func turnHintOff(for sender: UIButton) {
-    sender.isUserInteractionEnabled = false
-    sender.isHidden = true
-// uncomment if corresponding outlets were connected
-//    switch title {
-//    case "50/50":
-//      fiftyFiftyImage.image = UIImage(named: "Logo")
-//    case "Audience Help":
-//      audienceHelpImage.image = UIImage(named: "Logo")
-//    case "Friends Help":
-//      friendsHelpImage.image = UIImage(named: "Logo")
-//    default: debugPrint("Unexpected case")
-//    }
   }
   
   private func defineAnswerButton(withTitle title: String) -> UIButton? {
