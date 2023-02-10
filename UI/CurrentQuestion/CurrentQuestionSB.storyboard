@@ -243,6 +243,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerA" destination="pve-Gr-Ggr" id="YO6-HX-ZNV"/>
+                        <outlet property="answerB" destination="4N5-mZ-CuJ" id="MT2-oc-wmU"/>
+                        <outlet property="answerC" destination="Dcb-G7-NGQ" id="mbq-C8-V36"/>
+                        <outlet property="answerD" destination="LLH-8b-IMS" id="jqA-39-dKs"/>
                         <outlet property="audienceHelp" destination="hci-Wf-PRm" id="SCq-vY-dAF"/>
                         <outlet property="fiftyFiftyHelp" destination="ocz-zb-dUH" id="YP6-eh-YFE"/>
                         <outlet property="friendsHelp" destination="qLL-Xc-aqO" id="eds-ex-dZI"/>
