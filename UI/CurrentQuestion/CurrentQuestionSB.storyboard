@@ -32,7 +32,7 @@
                                                     <constraint firstAttribute="width" constant="110" id="tb9-1U-NHX"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qem-3r-OJq">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qem-3r-OJq">
                                                 <rect key="frame" x="130" y="5" width="223" height="105"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
@@ -44,14 +44,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="500 RUB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9U-pv-JY0">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n9U-pv-JY0">
                                                 <rect key="frame" x="261" y="137" width="92" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timerLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJU-KW-8ZB">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJU-KW-8ZB">
                                                 <rect key="frame" x="162" y="196" width="37" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="oAp-Y1-TJ3"/>
@@ -73,6 +73,7 @@
                                             <constraint firstItem="4yb-jS-CGR" firstAttribute="leading" secondItem="tn2-XA-KCp" secondAttribute="leading" id="iGu-jc-pWQ"/>
                                             <constraint firstItem="ibh-1s-FDt" firstAttribute="top" secondItem="4yb-jS-CGR" secondAttribute="bottom" constant="8" id="rSC-JU-BwK"/>
                                             <constraint firstItem="pJU-KW-8ZB" firstAttribute="centerX" secondItem="tn2-XA-KCp" secondAttribute="centerX" id="v0V-NB-aqF"/>
+                                            <constraint firstItem="qem-3r-OJq" firstAttribute="leading" secondItem="4yb-jS-CGR" secondAttribute="trailing" constant="20" id="xn3-Ih-zlh"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4oU-NS-6sd">
@@ -248,11 +249,11 @@
                         <outlet property="answerC" destination="Dcb-G7-NGQ" id="mbq-C8-V36"/>
                         <outlet property="answerD" destination="LLH-8b-IMS" id="jqA-39-dKs"/>
                         <outlet property="audienceHelp" destination="hci-Wf-PRm" id="SCq-vY-dAF"/>
-                        <outlet property="audienceHelpImage" destination="zWh-hF-f04" id="M29-NL-BMh"/>
+                        <outlet property="audienceHelpImage" destination="zWh-hF-f04" id="asi-JV-YRv"/>
                         <outlet property="fiftyFiftyHelp" destination="ocz-zb-dUH" id="YP6-eh-YFE"/>
-                        <outlet property="fiftyFiftyImage" destination="D64-OD-Tnh" id="PT0-Fr-4XO"/>
+                        <outlet property="fiftyFiftyImage" destination="D64-OD-Tnh" id="5Pp-vv-J6x"/>
                         <outlet property="friendsHelp" destination="qLL-Xc-aqO" id="eds-ex-dZI"/>
-                        <outlet property="friendsHelpImage" destination="WJt-jV-ux6" id="YbM-gh-gkh"/>
+                        <outlet property="friendsHelpImage" destination="WJt-jV-ux6" id="S78-yh-MVE"/>
                         <outlet property="logoImage" destination="4yb-jS-CGR" id="Zin-Cy-f0x"/>
                         <outlet property="moneyCount" destination="n9U-pv-JY0" id="hHx-NH-DLE"/>
                         <outlet property="questionNumber" destination="ibh-1s-FDt" id="EDw-sd-pNH"/>

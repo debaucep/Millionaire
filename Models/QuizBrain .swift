@@ -8,9 +8,9 @@
 import Foundation
 
 struct QuizBrain {
-    let   quiz = [
+    let quiz = [
         Question(q: "A person with well-developed abdominal muscles is said to have a what?", a: ["One-pack", "12-pack", "Family-pack", "Six-pack"], correctAnswer: "Six-pack"),
-        Question(q: "Five dollars is worth how many nickels?", a: ["25", "50", "100"], correctAnswer: "100"),
+        Question(q: "Five dollars is worth how many nickels?", a: ["25", "50", "75", "100"], correctAnswer: "100"),
         Question(q: "Which two words traditionally appear onscreen at the termination of a feature film?", a: ["The End", "The Conclusion", "The Finish", "The Pizza Rolls Are Done"], correctAnswer: "The End"),
         Question(q: "A magnet would most likely attract which of the following?", a: ["Metal", "Plastic", "Wood", "The wrong man"], correctAnswer: "Metal"),
         Question(q: "Which of these names is not in the title of a Shakespeare play?", a: ["Hamlet", "Romeo", "Macbeth", "Darren"], correctAnswer: "Darren"),

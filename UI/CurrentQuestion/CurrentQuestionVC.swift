@@ -13,104 +13,89 @@ class CurrentQuestionVC: UIViewController {
   var answerButtons: [UIButton] = []
   
   @IBOutlet weak var logoImage: UIImageView!
-  
   @IBOutlet weak var questionText: UILabel!
-  
   @IBOutlet weak var questionNumber: UILabel!
-  
   @IBOutlet weak var moneyCount: UILabel!
   
-  
   @IBOutlet weak var fiftyFiftyHelp: UIButton!
-  
   @IBOutlet weak var audienceHelp: UIButton!
-  
   @IBOutlet weak var friendsHelp: UIButton!
-  
   @IBOutlet weak var timerLabel: UILabel!
   
- 
-   @IBOutlet weak var fiftyFiftyImage: UIImageView!
-   @IBOutlet weak var audienceHelpImage: UIImageView!
-   @IBOutlet weak var friendsHelpImage: UIImageView!
-
-    
+  @IBOutlet weak var fiftyFiftyImage: UIImageView!
+  @IBOutlet weak var audienceHelpImage: UIImageView!
+  @IBOutlet weak var friendsHelpImage: UIImageView!
+  
   @IBOutlet weak var answerA: UIButton!
   @IBOutlet weak var answerB: UIButton!
   @IBOutlet weak var answerC: UIButton!
   @IBOutlet weak var answerD: UIButton!
   
-  var timerCounter = 5
-    var currentQuestion = 0
-  
-    
-    
-    func updateUI () {
-        questionText.text = question?.text
-    }
-    
+  var timer = Timer()
   // 5 is made only for test purpose. come back to 30 before release
-var timer = Timer ()
-    
+  var timerCounter = 0
+  var currentQuestion = 0
+  
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    answerButtons = [answerA, answerB, answerC, answerD]
     fiftyFiftyHelp.setTitle("50/50", for: .normal)
     audienceHelp.setTitle("Audience Help", for: .normal)
     friendsHelp.setTitle("Friends Help", for: .normal)
-    
-    question = questionFetcher.getCurrentQuestion(with: 0)
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    updateUI()
+    currentQuestion += 1
+  }
+  
+  func updateUI() {
+    answerButtons = [answerA, answerB, answerC, answerD]
+    question = questionFetcher.getCurrentQuestion(with: currentQuestion)
     setAnswers(for: question)
-    
-    timerLabel.text = String (timerCounter)
+    questionText.text = question?.text
+    questionNumber.text = String(describing: currentQuestion + 1)
+    guard let money = question?.questionDict[currentQuestion + 1] else { return }
+    moneyCount.text = String(describing: money)
     
     timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
       if self.timerCounter > 0 {
         //print ("\(self.secondsRemaining) seconds")
-        self.timerLabel.text = String (self.timerCounter)
+        self.timerLabel.text = String(self.timerCounter)
         self.timerCounter -= 1
       } else {
-        Timer.invalidate()
+        self.timer.invalidate()
         self.timeIsOver()
         // And consider player answered WRONG!
       }
     }
-    
+    timerCounter = 30
+    timerLabel.text = String(timerCounter)
     playSound("BackroundMusicPlayerIsThinking")
-   
-      updateUI ()
-      
-      
   }
-   
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print ("View Will Appear code is here")
-    }
-
+  
   @IBAction func choicePressed(_ sender: UIButton) {
     stopSound()
     let answer = prepareToCompare(title: sender.currentTitle)
     let result = isAnswerTrue(answer: answer)
     changeColor(for: sender, result: result)
-      if result {
-          timer.invalidate()
-          playSound("AnsweredRight")
-      } else {
-          timer.invalidate()
-          playSound("AnsweredWrong")
-      }
+    if result {
+      timer.invalidate()
+      playSound("AnsweredRight")
+    } else {
+      timer.invalidate()
+      playSound("AnsweredWrong")
+    }
     
   }
-  
   
   @IBAction func helpPressed(_ sender: UIButton) {
     guard let title = sender.currentTitle else { return }
     applyHint(for: title)
     turnHintOff(for: sender)
   }
-  
   
   //MARK: - private methods with logic
   private func setAnswers(for question: Question?) {
@@ -130,6 +115,9 @@ var timer = Timer ()
     DispatchQueue.main.asyncAfter(deadline: .now()) {
       result ? (control.tintColor = .systemGreen) : (control.tintColor = .systemRed)
     }
+    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+      control.tintColor = .systemBlue
+    }
   }
   
   private func timeIsOver() {
@@ -137,7 +125,7 @@ var timer = Timer ()
     let vc = storyboard.instantiateViewController(withIdentifier: "GameProgressVC") as! GameProgressVC
     vc.modalPresentationStyle = .fullScreen
     present(vc, animated: true)
-      playSound("AnsweredWrong")
+    playSound("AnsweredWrong")
   }
   
 }
@@ -147,16 +135,15 @@ extension CurrentQuestionVC {
   private func turnHintOff(for sender: UIButton) {
     sender.isUserInteractionEnabled = false
     sender.isHidden = true
-    // uncomment if corresponding outlets were connected
-    //    switch title {
-    //    case "50/50":
-    //      fiftyFiftyImage.image = UIImage(named: "Logo")
-    //    case "Audience Help":
-    //      audienceHelpImage.image = UIImage(named: "Logo")
-    //    case "Friends Help":
-    //      friendsHelpImage.image = UIImage(named: "Logo")
-    //    default: debugPrint("Unexpected case")
-    //    }
+    switch title {
+    case "50/50":
+      fiftyFiftyImage.image = UIImage(named: "Logo")
+    case "Audience Help":
+      audienceHelpImage.image = UIImage(named: "Logo")
+    case "Friends Help":
+      friendsHelpImage.image = UIImage(named: "Logo")
+    default: debugPrint("Unexpected case")
+    }
   }
   
   private func applyHint(for senderTitle: String) {
@@ -170,7 +157,7 @@ extension CurrentQuestionVC {
       wrongAnswers.forEach {
         let button = defineAnswerButton(withTitle: $0)
         button?.setTitle("", for: .normal)
-        button?.isUserInteractionEnabled = false
+//        button?.isUserInteractionEnabled = false
         answerButtons.removeAll(where: {$0 == button})
       }
       
