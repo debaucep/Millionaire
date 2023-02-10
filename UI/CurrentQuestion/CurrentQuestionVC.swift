@@ -111,6 +111,7 @@ class CurrentQuestionVC: UIViewController {
     let vc = storyboard.instantiateViewController(withIdentifier: "GameProgressVC") as! GameProgressVC
     vc.modalPresentationStyle = .fullScreen
     present(vc, animated: true)
+      playSound("AnsweredWrong")
   }
   
 }
