@@ -9,6 +9,7 @@ import UIKit
 
 class CurrentQuestionVC: UIViewController {
   let questionFetcher = QuestionFetcher()
+  var question: Question?
   
   @IBOutlet weak var logoImage: UIImageView!
   
@@ -38,8 +39,8 @@ class CurrentQuestionVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    let currentQuestion = questionFetcher.getCurrentQuestion(with: 0)
-    setAnswers(for: currentQuestion)
+    question = questionFetcher.getCurrentQuestion(with: 0)
+    setAnswers(for: question)
     
     timerLabel.text = String (timerCounter)
     
@@ -60,6 +61,9 @@ class CurrentQuestionVC: UIViewController {
   
   @IBAction func choicePressed(_ sender: UIButton) {
     stopSound()
+    let answer = prepareToCompare(title: sender.currentTitle)
+    let result = isAnswerTrue(answer: answer)
+    changeColor(for: sender, result: result)
   }
   
   
@@ -67,11 +71,29 @@ class CurrentQuestionVC: UIViewController {
     //the help is shown and the image of button is crossed with red lines
   }
   
-  private func setAnswers(for question: Question) {
+  private func setAnswers(for question: Question?) {
+    guard let question = question else { return }
     answerA.setTitle("A. \(question.options[0])", for: .normal)
     answerB.setTitle("B. \(question.options[1])", for: .normal)
     answerC.setTitle("C. \(question.options[2])", for: .normal)
     answerD.setTitle("D. \(question.options[3])", for: .normal)
+  }
+  
+  private func isAnswerTrue(answer: String) -> Bool {
+    guard let trueAnswer = question?.answer else { return false}
+    return answer == trueAnswer ? true : false
+  }
+  
+  private func prepareToCompare(title: String?) -> String {
+    let answerSeparated = title?.split(separator: " ")
+    guard let answerSubstring = answerSeparated?[1] else { return "Error"}
+    return String(describing: answerSubstring)
+  }
+  
+  private func changeColor(for control: UIControl, result: Bool) {
+    DispatchQueue.main.asyncAfter(deadline: .now()) {
+      result ? (control.tintColor = .systemGreen) : (control.tintColor = .systemRed)
+    }
   }
   
 }
