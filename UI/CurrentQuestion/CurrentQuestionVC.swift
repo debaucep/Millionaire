@@ -34,6 +34,7 @@ class CurrentQuestionVC: UIViewController {
    @IBOutlet weak var audienceHelpImage: UIImageView!
    @IBOutlet weak var friendsHelpImage: UIImageView!
    */
+    
   @IBOutlet weak var answerA: UIButton!
   @IBOutlet weak var answerB: UIButton!
   @IBOutlet weak var answerC: UIButton!
@@ -42,7 +43,7 @@ class CurrentQuestionVC: UIViewController {
   var timerCounter = 5
   
   // 5 is made only for test purpose. come back to 30 before release
-  
+var timer = Timer ()
   override func viewDidLoad() {
     super.viewDidLoad()
     answerButtons = [answerA, answerB, answerC, answerD]
@@ -55,7 +56,7 @@ class CurrentQuestionVC: UIViewController {
     
     timerLabel.text = String (timerCounter)
     
-    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
+    timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
       if self.timerCounter > 0 {
         //print ("\(self.secondsRemaining) seconds")
         self.timerLabel.text = String (self.timerCounter)
@@ -70,12 +71,21 @@ class CurrentQuestionVC: UIViewController {
     playSound("BackroundMusicPlayerIsThinking")
     
   }
-  
+    
+
   @IBAction func choicePressed(_ sender: UIButton) {
     stopSound()
     let answer = prepareToCompare(title: sender.currentTitle)
     let result = isAnswerTrue(answer: answer)
     changeColor(for: sender, result: result)
+      if result {
+          timer.invalidate()
+          playSound("AnsweredRight")
+      } else {
+          timer.invalidate()
+          playSound("AnsweredWrong")
+      }
+    
   }
   
   
