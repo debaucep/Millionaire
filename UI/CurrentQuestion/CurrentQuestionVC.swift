@@ -48,17 +48,20 @@ class CurrentQuestionVC: UIViewController {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     updateUI()
-    currentQuestion += 1
+    if currentQuestion < 14 {
+      currentQuestion += 1
+    }
   }
   
   func updateUI() {
     answerButtons = [answerA, answerB, answerC, answerD]
+    answerButtons.forEach { $0.isUserInteractionEnabled = true }
     question = questionFetcher.getCurrentQuestion(with: currentQuestion)
     setAnswers(for: question)
     questionText.text = question?.text
-    questionNumber.text = String(describing: currentQuestion + 1)
+    questionNumber.text = String("Question \(currentQuestion + 1)")
     guard let money = question?.questionDict[currentQuestion + 1] else { return }
-    moneyCount.text = String(describing: money)
+    moneyCount.text = String(money)
     
     timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
       if self.timerCounter > 0 {
@@ -132,6 +135,7 @@ class CurrentQuestionVC: UIViewController {
 
 //MARK: - Hints logic
 extension CurrentQuestionVC {
+  
   private func turnHintOff(for sender: UIButton) {
     sender.isUserInteractionEnabled = false
     sender.isHidden = true
@@ -157,7 +161,7 @@ extension CurrentQuestionVC {
       wrongAnswers.forEach {
         let button = defineAnswerButton(withTitle: $0)
         button?.setTitle("", for: .normal)
-//        button?.isUserInteractionEnabled = false
+        button?.isUserInteractionEnabled = false
         answerButtons.removeAll(where: {$0 == button})
       }
       
@@ -189,8 +193,9 @@ extension CurrentQuestionVC {
   }
   
   private func prepareToCompare(title: String?) -> String {
-    let answerSeparated = title?.split(separator: " ")
-    guard let answerSubstring = answerSeparated?.last else { return "Error"}
+    var answerSeparated = title?.split(separator: " ")
+    answerSeparated?.removeFirst()
+    guard let answerSubstring = answerSeparated?.joined(separator: " ") else { return "Error"}
     return String(describing: answerSubstring)
   }
   
