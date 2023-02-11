@@ -20,6 +20,12 @@ final class MainScreenVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupUI()
+    self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background1")!)
+      UIGraphicsBeginImageContext(self.view.frame.size)
+      UIImage(named: "background1")?.draw(in: self.view.bounds)
+      let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+      UIGraphicsEndImageContext()
+      self.view.backgroundColor = UIColor(patternImage: image)
   }
   
   @IBAction func rulesButtonPressed(_ sender: UIButton) {

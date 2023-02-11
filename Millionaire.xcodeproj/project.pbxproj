@@ -22,6 +22,7 @@
 		DC79EBDB2992C16800A2BF54 /* HintsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79EBDA2992C16800A2BF54 /* HintsData.swift */; };
 		DC79EBDE2992C37D00A2BF54 /* CurrentQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC79EBDD2992C37D00A2BF54 /* CurrentQuestionVC.swift */; };
 		DC79EBE02992C39F00A2BF54 /* CurrentQuestionSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC79EBDF2992C39F00A2BF54 /* CurrentQuestionSB.storyboard */; };
+		DC93A2852997ECB800650CD0 /* background1.png in Resources */ = {isa = PBXBuildFile; fileRef = DC93A2842997ECB800650CD0 /* background1.png */; };
 		DCA72EBD2992ABE400CCD434 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA72EBC2992ABE400CCD434 /* Timer.swift */; };
 		DCB18B7C298FE47A006FCC61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB18B7B298FE47A006FCC61 /* AppDelegate.swift */; };
 		DCB18B7E298FE47A006FCC61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB18B7D298FE47A006FCC61 /* SceneDelegate.swift */; };
@@ -55,6 +56,7 @@
 		DC79EBDA2992C16800A2BF54 /* HintsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsData.swift; sourceTree = "<group>"; };
 		DC79EBDD2992C37D00A2BF54 /* CurrentQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentQuestionVC.swift; sourceTree = "<group>"; };
 		DC79EBDF2992C39F00A2BF54 /* CurrentQuestionSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentQuestionSB.storyboard; sourceTree = "<group>"; };
+		DC93A2842997ECB800650CD0 /* background1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background1.png; sourceTree = "<group>"; };
 		DCA72EBC2992ABE400CCD434 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		DCB18B78298FE47A006FCC61 /* Millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB18B7B298FE47A006FCC61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				DCB18B84298FE47C006FCC61 /* Assets.xcassets */,
+				DC93A2842997ECB800650CD0 /* background1.png */,
 				DCB18B9A298FE9EA006FCC61 /* AnswerIsSubmitted.mp3 */,
 				DCB18B98298FE992006FCC61 /* AnsweredWrong.mp3 */,
 				DCB18B96298FE8CD006FCC61 /* AnsweredRight.mp3 */,
@@ -290,6 +293,7 @@
 				DCB18B9B298FE9EA006FCC61 /* AnswerIsSubmitted.mp3 in Resources */,
 				DC32D9C629929AC9001F6E84 /* GameStart.storyboard in Resources */,
 				DCB18B97298FE8CD006FCC61 /* AnsweredRight.mp3 in Resources */,
+				DC93A2852997ECB800650CD0 /* background1.png in Resources */,
 				DCB18B9D298FEAF9006FCC61 /* WonMillion.mp3 in Resources */,
 				3539A2A229924F0300993C1F /* MainScreenSB.storyboard in Resources */,
 				DCB18B85298FE47C006FCC61 /* Assets.xcassets in Resources */,

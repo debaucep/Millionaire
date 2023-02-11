@@ -28,7 +28,7 @@ class GameProgressVC: UIViewController {
     var listOfViews = [UIImageView]()
     let currentLevel = 0
     var timerProgress = Timer ()
-    var timerProgressCounter = 8.0
+    var timerProgressCounter = 5.0
     
     override func viewDidLoad() {
         super.viewDidLoad()

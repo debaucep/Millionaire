@@ -40,9 +40,23 @@ class CurrentQuestionVC: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+      
+      
+      // set background
+      
+      self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background1")!)
+      UIGraphicsBeginImageContext(self.view.frame.size)
+      UIImage(named: "background1")?.draw(in: self.view.bounds)
+      let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+      UIGraphicsEndImageContext()
+      self.view.backgroundColor = UIColor(patternImage: image)
+      
+      
     fiftyFiftyHelp.setTitle("50/50", for: .normal)
     audienceHelp.setTitle("Audience Help", for: .normal)
     friendsHelp.setTitle("Friends Help", for: .normal)
+      
+      
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -61,7 +75,7 @@ class CurrentQuestionVC: UIViewController {
     questionText.text = question?.text
     questionNumber.text = String("Question \(currentQuestion + 1)")
     guard let money = question?.questionDict[currentQuestion + 1] else { return }
-    moneyCount.text = String(money)
+    moneyCount.text = "\(money) RUB"
     
     timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
       if self.timerCounter > 0 {

@@ -16,50 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vdl-VD-FDD">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="vdl-VD-FDD">
                                 <rect key="frame" x="90" y="109" width="213" height="213"/>
-                                <color key="backgroundColor" red="0.27665036920000002" green="0.39751890299999998" blue="0.66939955949999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vdl-VD-FDD" secondAttribute="height" multiplier="1:1" id="Kho-iY-UXy"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-bF-Mnp">
-                                <rect key="frame" x="110" y="638.66666666666663" width="173" height="135.33333333333337"/>
-                                <color key="tintColor" red="0.38813927770000001" green="0.85743510720000005" blue="0.62782722710000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Start Game">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="28"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bG-NM-9YO"/>
-                                    <segue destination="MWy-bA-Wmb" kind="presentation" modalPresentationStyle="fullScreen" id="rwr-ni-5Th"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-3Q-Y4J">
-                                <rect key="frame" x="150" y="351" width="93" height="26.666666666666686"/>
+                                <rect key="frame" x="100.33333333333333" y="322.33333333333331" width="192.66666666666669" height="55"/>
                                 <color key="tintColor" systemColor="linkColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="46"/>
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to Who Wants to be a Millionaire" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOF-Hs-mGN">
-                                <rect key="frame" x="20" y="392.66666666666669" width="353" height="67"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to Who Wants to be a Millionaire" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="iOF-Hs-mGN">
+                                <rect key="frame" x="20" y="392.33333333333331" width="353" height="67.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dB-Cg-7ON">
-                                <rect key="frame" x="106.33333333333333" y="585" width="180.33333333333337" height="47.666666666666629"/>
-                                <color key="tintColor" red="0.38813927770000001" green="0.85743510720000005" blue="0.62782722710000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Game Rules">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="28"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="rulesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1v9-7i-Pbn"/>
-                                    <segue destination="19K-mE-BNj" kind="presentation" modalPresentationStyle="fullScreen" id="6el-Tc-4dE"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="tdM-G4-SNY">
+                                <rect key="frame" x="96" y="547" width="201" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dB-Cg-7ON">
+                                        <rect key="frame" x="0.0" y="0.0" width="201" height="50"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="GAME RULES">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="28"/>
+                                            <color key="baseBackgroundColor" red="0.51504713300000005" green="0.8469614983" blue="0.64546078439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rulesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1v9-7i-Pbn"/>
+                                            <segue destination="19K-mE-BNj" kind="presentation" modalPresentationStyle="fullScreen" id="6el-Tc-4dE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7e-bF-Mnp">
+                                        <rect key="frame" x="0.0" y="100" width="201" height="50"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="START GAME">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="28"/>
+                                            <color key="baseBackgroundColor" red="0.51504713300000005" green="0.8469614983" blue="0.64546078439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bG-NM-9YO"/>
+                                            <segue destination="MWy-bA-Wmb" kind="presentation" modalPresentationStyle="fullScreen" id="rwr-ni-5Th"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.47083669900000003" green="0.4536600113" blue="0.63745391370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -67,19 +73,17 @@
                             <constraint firstItem="iOF-Hs-mGN" firstAttribute="top" secondItem="rWk-3Q-Y4J" secondAttribute="bottom" constant="15" id="1CE-11-p7d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vdl-VD-FDD" secondAttribute="trailing" constant="90" id="2CZ-Ho-rns"/>
                             <constraint firstItem="vdl-VD-FDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9rV-C9-V4a"/>
-                            <constraint firstItem="P7e-bF-Mnp" firstAttribute="height" secondItem="3dB-Cg-7ON" secondAttribute="height" multiplier="2.8381" id="BKH-nL-Foh"/>
-                            <constraint firstItem="P7e-bF-Mnp" firstAttribute="width" secondItem="3dB-Cg-7ON" secondAttribute="width" multiplier="0.95942" id="NWR-zs-h6v"/>
+                            <constraint firstItem="tdM-G4-SNY" firstAttribute="centerX" secondItem="iOF-Hs-mGN" secondAttribute="centerX" id="GMK-aF-udN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tdM-G4-SNY" secondAttribute="bottom" constant="121" id="I3O-uV-Sas"/>
                             <constraint firstItem="rWk-3Q-Y4J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PDN-oJ-LMO"/>
                             <constraint firstItem="vdl-VD-FDD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="PHq-hq-YY7"/>
                             <constraint firstItem="iOF-Hs-mGN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Pbl-zj-Utq"/>
                             <constraint firstItem="vdl-VD-FDD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="WYG-u3-E6N"/>
+                            <constraint firstItem="tdM-G4-SNY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="avo-Ur-C6l"/>
                             <constraint firstItem="iOF-Hs-mGN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bPq-UA-mZK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iOF-Hs-mGN" secondAttribute="trailing" constant="20" id="hnI-oz-LLK"/>
-                            <constraint firstItem="P7e-bF-Mnp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kOg-3H-anC"/>
-                            <constraint firstItem="P7e-bF-Mnp" firstAttribute="top" secondItem="3dB-Cg-7ON" secondAttribute="bottom" constant="6" id="mFB-3k-OKX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="P7e-bF-Mnp" secondAttribute="bottom" constant="44" id="ooB-im-hBt"/>
-                            <constraint firstItem="3dB-Cg-7ON" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pgU-r1-uvT"/>
-                            <constraint firstItem="3dB-Cg-7ON" firstAttribute="top" relation="lessThanOrEqual" secondItem="iOF-Hs-mGN" secondAttribute="bottom" constant="150" id="yUw-Tv-KXS"/>
+                            <constraint firstItem="tdM-G4-SNY" firstAttribute="top" secondItem="iOF-Hs-mGN" secondAttribute="bottom" constant="87.333333333333314" id="vaH-gG-ion"/>
+                            <constraint firstItem="tdM-G4-SNY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="547" id="vqj-Zr-DQy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -110,6 +114,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="300" height="300"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -586,7 +586,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rl-Uu-JMb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rl-Uu-JMb">
                                 <rect key="frame" x="-8" y="47" width="154" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -595,7 +595,7 @@
                                     <segue destination="l8F-hM-8PG" kind="presentation" modalPresentationStyle="fullScreen" id="r5W-7e-Et8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8F-vN-Mah">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8F-vN-Mah">
                                 <rect key="frame" x="-8" y="80" width="129" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
@@ -619,6 +619,12 @@
                             <constraint firstItem="x4Q-g5-o9g" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="dfd-IZ-pPF"/>
                             <constraint firstItem="Nye-DA-pF0" firstAttribute="top" secondItem="x4Q-g5-o9g" secondAttribute="bottom" constant="10" id="sYr-VI-KqL"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="8rl-Uu-JMb"/>
+                                <exclude reference="n8F-vN-Mah"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="Question1" destination="e8S-WN-pKU" id="tpu-KF-GXj"/>
