@@ -43,8 +43,9 @@ class GameProgressVC: UIViewController {
 
               self.dismiss(animated: true)
               stopSound()
-          } else {
-            Timer.invalidate()
+              Timer.invalidate()
+//          } else {
+//            Timer.invalidate()
             // And consider player answered WRONG!
           }
         }
