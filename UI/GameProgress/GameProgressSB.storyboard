@@ -32,7 +32,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-tC-qjC">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="36"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LineYellow" translatesAutoresizingMaskIntoConstraints="NO" id="drq-4G-M7u">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LineViolet" translatesAutoresizingMaskIntoConstraints="NO" id="drq-4G-M7u">
                                                 <rect key="frame" x="45" y="0.0" width="300" height="36"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="center" semanticContentAttribute="forceLeftToRight" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="hGr-pH-xpn">
@@ -44,7 +44,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     1 Миллион" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkU-HP-Zq7">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  1000000 RUB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkU-HP-Zq7">
                                                         <rect key="frame" x="157.66666666666663" y="0.0" width="142.33333333333337" height="36"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -550,7 +550,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaU-0S-gXN">
                                         <rect key="frame" x="0.0" y="617" width="390" height="36"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LineGreen" translatesAutoresizingMaskIntoConstraints="NO" id="e8S-WN-pKU">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LineViolet" translatesAutoresizingMaskIntoConstraints="NO" id="e8S-WN-pKU">
                                                 <rect key="frame" x="45" y="0.0" width="300" height="36"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="center" semanticContentAttribute="forceLeftToRight" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-Sm-hVY">
@@ -586,37 +586,46 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xzH-2T-edD">
+                                <rect key="frame" x="0.0" y="47" width="140" height="57"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back to Menu">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backToMenuPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7qk-B3-RjK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rl-Uu-JMb">
                                 <rect key="frame" x="-8" y="47" width="154" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back to Question"/>
-                                <connections>
-                                    <segue destination="l8F-hM-8PG" kind="presentation" modalPresentationStyle="fullScreen" id="r5W-7e-Et8"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8F-vN-Mah">
                                 <rect key="frame" x="-8" y="80" width="129" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back to Menu"/>
-                                <connections>
-                                    <segue destination="ycC-iA-QbZ" kind="presentation" modalPresentationStyle="fullScreen" id="eFJ-xo-0Ir"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="x4Q-g5-o9g" firstAttribute="leading" secondItem="xzH-2T-edD" secondAttribute="trailing" constant="5" id="35l-Dx-drh"/>
                             <constraint firstItem="x4Q-g5-o9g" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="44X-SP-eEd"/>
                             <constraint firstItem="M6t-No-tEj" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="4rT-3V-SsR"/>
                             <constraint firstItem="M6t-No-tEj" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="8pJ-Li-7SG"/>
                             <constraint firstAttribute="bottom" secondItem="M6t-No-tEj" secondAttribute="bottom" id="DRw-ZK-2tg"/>
                             <constraint firstAttribute="trailing" secondItem="Nye-DA-pF0" secondAttribute="trailing" id="GxL-Ar-qFX"/>
+                            <constraint firstItem="xzH-2T-edD" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="IHN-5F-4bz"/>
                             <constraint firstItem="Nye-DA-pF0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="RW2-g1-tPT"/>
                             <constraint firstItem="M6t-No-tEj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SR2-Fm-12b"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Nye-DA-pF0" secondAttribute="bottom" id="T9y-Lw-cJF"/>
                             <constraint firstItem="x4Q-g5-o9g" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="dfd-IZ-pPF"/>
+                            <constraint firstItem="xzH-2T-edD" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="nsI-r9-Gu4"/>
                             <constraint firstItem="Nye-DA-pF0" firstAttribute="top" secondItem="x4Q-g5-o9g" secondAttribute="bottom" constant="10" id="sYr-VI-KqL"/>
                         </constraints>
                         <variation key="default">
@@ -627,53 +636,50 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="Question1" destination="e8S-WN-pKU" id="tpu-KF-GXj"/>
-                        <outlet property="Question10" destination="cmW-wk-83k" id="cw6-ba-VeC"/>
-                        <outlet property="Question11" destination="7bE-Wc-EyN" id="ifE-0x-xkm"/>
-                        <outlet property="Question12" destination="Ybk-Lq-p0u" id="vAs-L0-PPb"/>
-                        <outlet property="Question13" destination="5wA-X7-vtK" id="iAN-9z-Fhd"/>
-                        <outlet property="Question14" destination="2W2-ut-T57" id="18F-X6-h9t"/>
-                        <outlet property="Question15" destination="drq-4G-M7u" id="dlK-3J-A3d"/>
-                        <outlet property="Question2" destination="D5R-qw-6HE" id="p0L-G9-C0t"/>
-                        <outlet property="Question3" destination="guu-lR-QjH" id="6Wa-1L-JHh"/>
-                        <outlet property="Question4" destination="mX1-ez-GgW" id="ZlY-F8-PYD"/>
-                        <outlet property="Question5" destination="xpS-gb-CER" id="F6d-ER-h9b"/>
-                        <outlet property="Question6" destination="0eh-7w-eec" id="85H-5G-pyr"/>
-                        <outlet property="Question7" destination="Khp-Mt-vmY" id="3Lf-hg-foS"/>
-                        <outlet property="Question8" destination="Qli-Ie-dlM" id="OL7-VK-01m"/>
-                        <outlet property="Question9" destination="kG1-3e-04Q" id="fYS-Gb-kq2"/>
+                        <outlet property="backToMenu" destination="xzH-2T-edD" id="Z4g-to-VRC"/>
+                        <outlet property="question1" destination="e8S-WN-pKU" id="tpu-KF-GXj"/>
+                        <outlet property="question10" destination="cmW-wk-83k" id="cw6-ba-VeC"/>
+                        <outlet property="question11" destination="7bE-Wc-EyN" id="ifE-0x-xkm"/>
+                        <outlet property="question12" destination="Ybk-Lq-p0u" id="vAs-L0-PPb"/>
+                        <outlet property="question13" destination="5wA-X7-vtK" id="iAN-9z-Fhd"/>
+                        <outlet property="question14" destination="2W2-ut-T57" id="18F-X6-h9t"/>
+                        <outlet property="question15" destination="drq-4G-M7u" id="dlK-3J-A3d"/>
+                        <outlet property="question2" destination="D5R-qw-6HE" id="p0L-G9-C0t"/>
+                        <outlet property="question3" destination="guu-lR-QjH" id="6Wa-1L-JHh"/>
+                        <outlet property="question4" destination="mX1-ez-GgW" id="ZlY-F8-PYD"/>
+                        <outlet property="question5" destination="xpS-gb-CER" id="F6d-ER-h9b"/>
+                        <outlet property="question6" destination="0eh-7w-eec" id="85H-5G-pyr"/>
+                        <outlet property="question7" destination="Khp-Mt-vmY" id="3Lf-hg-foS"/>
+                        <outlet property="question8" destination="Qli-Ie-dlM" id="OL7-VK-01m"/>
+                        <outlet property="question9" destination="kG1-3e-04Q" id="fYS-Gb-kq2"/>
+                        <segue destination="ycC-iA-QbZ" kind="show" identifier="toMainScreen" id="WZ3-tH-O3p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="56.92307692307692" y="-34.123222748815166"/>
         </scene>
-        <!--CurrentQuestionVC-->
-        <scene sceneID="bEk-N7-F6E">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CurrentQuestionSB" referencedIdentifier="CurrentQuestionVC" id="l8F-hM-8PG" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0zf-8K-y9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="680" y="-129"/>
-        </scene>
         <!--MainVC-->
         <scene sceneID="lGU-47-BgV">
             <objects>
-                <viewControllerPlaceholder storyboardName="MainScreenSB" referencedIdentifier="MainVC" id="ycC-iA-QbZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="MainScreenSB" referencedIdentifier="MainVC" id="ycC-iA-QbZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="g70-QH-l0O"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ug-it-6v0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="637" y="61"/>
+            <point key="canvasLocation" x="660" y="-34"/>
         </scene>
     </scenes>
     <resources>
         <image name="BackgroundClear" width="414" height="736"/>
         <image name="LineBlue" width="320" height="38"/>
-        <image name="LineGreen" width="320" height="38"/>
         <image name="LineViolet" width="320" height="38"/>
-        <image name="LineYellow" width="320" height="38"/>
         <image name="Logo" width="300" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
