@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import Foundation
-
 
 class GameRulesVC: UIViewController {
     
@@ -15,7 +13,17 @@ class GameRulesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupQuizRules()
+        setupBackground()
+    }
+    
+    @IBAction func backToMainScreen(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
+//MARK: - Private setup methods
+    
+    private func setupQuizRules() {
         let quizRules = QuizRules()
         let text = quizRules.text
         rulesText.text = text
@@ -23,19 +31,17 @@ class GameRulesVC: UIViewController {
         rulesText.sizeToFit()
         rulesText.isEditable = false
         rulesText.isScrollEnabled = true
-        
-        // note Image should be placed into assets before the procedure
-        
-        
+    }
+    
+    // note Image should be placed into assets before the procedure
+    private func setupBackground() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background1")!)
         UIGraphicsBeginImageContext(self.view.frame.size)
         UIImage(named: "background1")?.draw(in: self.view.bounds)
         let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         self.view.backgroundColor = UIColor(patternImage: image)
-   
-        
-        
     }
+    
 }
 

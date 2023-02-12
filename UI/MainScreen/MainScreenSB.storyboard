@@ -102,7 +102,7 @@
                 <viewControllerPlaceholder storyboardName="GameRulesSB" referencedIdentifier="GamesRulesVC" id="19K-mE-BNj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Apm-2R-YNM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="81"/>
+            <point key="canvasLocation" x="666" y="-164"/>
         </scene>
         <!--GameStartVC-->
         <scene sceneID="5Cg-XR-FYj">
@@ -110,7 +110,7 @@
                 <viewControllerPlaceholder storyboardName="GameStart" referencedIdentifier="GameStartVC" id="MWy-bA-Wmb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7L-HZ-62A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="156"/>
+            <point key="canvasLocation" x="658" y="61"/>
         </scene>
     </scenes>
     <resources>
